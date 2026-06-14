@@ -1,4 +1,4 @@
-(ns propagators.datastructures.compound_data
+(ns propagators.deprecated.compound-data
   "Deprecated linked-list propagators over compound subnet cells.
 
   Prefer propagators.datastructures.compound-object for new compound slot work.
