@@ -1,0 +1,6 @@
+{:paths ["src"]
+ :deps {danlentz/clj-uuid {:mvn/version "0.2.5"}}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :main-opts ["-m" "run-tests"]}
+  :bench {:extra-paths ["dev/bench"]}}}

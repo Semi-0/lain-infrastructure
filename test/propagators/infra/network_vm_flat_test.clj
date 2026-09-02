@@ -897,4 +897,4 @@
 
 (deftest flat-effects-gur-does-not-directly-merge-cell-entries
   (is (not (re-find #"merge-cell-entry"
-                    (slurp "modules/infra/src/propagators/infra/gur/flat.clj")))))
+                    (slurp "src/propagators/infra/gur/flat.clj")))))

@@ -192,4 +192,4 @@
 
 (deftest network-vm-gur-does-not-directly-merge-cell-entries
   (is (not (re-find #"merge-cell-entry"
-                    (slurp "modules/infra/src/propagators/infra/network_vm/gur.clj")))))
+                    (slurp "src/propagators/infra/network_vm/gur.clj")))))

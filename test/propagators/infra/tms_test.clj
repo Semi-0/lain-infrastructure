@@ -427,4 +427,4 @@
 
 (deftest raw-tms-projection-does-not-claim-to-retract-ordinary-output
   (is (re-find #"not retracted"
-               (slurp "modules/infra/src/propagators/infra/datastructures/tms.clj"))))
+               (slurp "src/propagators/infra/datastructures/tms.clj"))))

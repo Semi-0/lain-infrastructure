@@ -103,7 +103,7 @@
 
 (deftest install-namespace-does-not-call-merge-cell-entry
   (is (not (re-find #"merge-cell-entry"
-                    (slurp "modules/infra/src/propagators/infra/install.clj")))))
+                    (slurp "src/propagators/infra/install.clj")))))
 
 (deftest reducer-slot-requires-merge-and-strongest-nets
   (try

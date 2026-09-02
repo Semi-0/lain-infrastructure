@@ -328,4 +328,4 @@
 
 (deftest reducer-cell-namespace-does-not-call-merge-cell-entry
   (is (not (re-find #"merge-cell-entry"
-                    (slurp "modules/infra/src/propagators/infra/datastructures/reducer_cell.clj")))))
+                    (slurp "src/propagators/infra/datastructures/reducer_cell.clj")))))
