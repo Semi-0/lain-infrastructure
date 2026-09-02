@@ -1,0 +1,74 @@
+(ns propagators.infra.stdlib.arithmetic
+  (:require [propagators.infra.ids :refer [new-node-id]]
+            [propagators.infra.network :as net]
+            [propagators.infra.stdlib.arithmetic.base :as base]
+            [propagators.infra.stdlib.arithmetic.intensity :as intensity]
+            [propagators.infra.stdlib.arithmetic.provenance :as provenance]))
+
+(defn procedure-extension
+  "A named-network extension fragment for one layered procedure layer."
+  [layer closure-value]
+  (let [slot-id (new-node-id)]
+    (-> net/empty-net
+        (net/seed-net-cell slot-id closure-value closure-value)
+        (net/assoc-net-dict-entry layer slot-id))))
+
+(defn base-extension
+  [closure-value]
+  (procedure-extension :base closure-value))
+
+(defn provenance-extension
+  [closure-value]
+  (procedure-extension :provenance closure-value))
+
+(defn intensity-extension
+  [closure-value]
+  (procedure-extension :intensity closure-value))
+
+(defn plus-base-extension
+  []
+  (base-extension base/plus-closure))
+
+(defn plus-provenance-extension
+  []
+  (provenance-extension provenance/+))
+
+(defn plus-intensity-extension
+  []
+  (intensity-extension intensity/+))
+
+(defn minus-base-extension
+  []
+  (base-extension base/minus-closure))
+
+(defn minus-provenance-extension
+  []
+  (provenance-extension provenance/-))
+
+(defn minus-intensity-extension
+  []
+  (intensity-extension intensity/-))
+
+(defn times-base-extension
+  []
+  (base-extension base/times-closure))
+
+(defn times-provenance-extension
+  []
+  (provenance-extension provenance/*))
+
+(defn times-intensity-extension
+  []
+  (intensity-extension intensity/*))
+
+(defn divide-base-extension
+  []
+  (base-extension base/divide-closure))
+
+(defn divide-provenance-extension
+  []
+  (provenance-extension provenance//))
+
+(defn divide-intensity-extension
+  []
+  (intensity-extension intensity//))

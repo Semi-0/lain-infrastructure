@@ -1,0 +1,24 @@
+(ns propagators.infra.stdlib.layered
+  "Layered procedure operator installers (`layered/+`, `layered/-`, …)."
+  (:refer-clojure :exclude [+ - * /])
+  (:require [propagators.infra.layered :as layered]))
+
+(defn +
+  "Layered operator installer backed by `procedure-id`."
+  [procedure-id]
+  (layered/p:layered-operator :stdlib/layered+ procedure-id))
+
+(defn -
+  "Layered operator installer backed by `procedure-id`."
+  [procedure-id]
+  (layered/p:layered-operator :stdlib/layered- procedure-id))
+
+(defn *
+  "Layered operator installer backed by `procedure-id`."
+  [procedure-id]
+  (layered/p:layered-operator :stdlib/layered* procedure-id))
+
+(defn /
+  "Layered operator installer backed by `procedure-id`."
+  [procedure-id]
+  (layered/p:layered-operator :stdlib/layered-divide procedure-id))
