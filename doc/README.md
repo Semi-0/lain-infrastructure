@@ -20,6 +20,9 @@ See [Four Core Features](four-core-features.md) for definitions, MIT comparison,
 
 ## Map
 
+- [Flat GUR Default](flat-gur-default.md) defines the public flat recursive
+  declaration facade and named availability builder.
+
 - [Propagators As A Coordination Language](coordination-language-kernel.md)
   frames the experiment as a self-reflective, multi-projectional coordination
   language and defines the minimal-kernel scope.

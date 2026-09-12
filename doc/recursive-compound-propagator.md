@@ -1,5 +1,11 @@
 # Recursive Compound Propagator
 
+Status note, 2026-09-12: flat GUR is now the default public
+`propagators.infra.gur` implementation. It declares recursive topology directly
+in the active `Net`. The accumulating-GUR material below documents the explicit
+`propagators.infra.gur.accumulating` alternative and historical measurements.
+See [Flat GUR Default](flat-gur-default.md).
+
 Source files:
 
 - `propagators/recursive.clj`
